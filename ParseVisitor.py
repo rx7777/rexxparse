@@ -86,7 +86,7 @@ class ParseVisitor(RxParseVisitor):
             self.visString(self.vars[pat])
         else:
             if self.log:
-                self.log.error('Failed to determine value of variable "{}"'.format(pat))
+                self.log.error(f'Failed to determine value of variable "{pat}"')
             self.visString(''.join(random.choices(string.ascii_letters, k=15)))
 
     def visitPattern(self, ctx):
